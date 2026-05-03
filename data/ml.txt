@@ -1,0 +1,9 @@
+Machine Learning is a subset of artificial intelligence that focuses 
+on building systems capable of learning patterns from data and making
+ decisions with minimal human intervention. It involves techniques such 
+ as supervised learning, unsupervised learning, and reinforcement learning, 
+ each suited to different types of problems. Algorithms like linear regression, 
+ decision trees, and neural networks are commonly used to train models on data. 
+ With the help of libraries like Scikit-learn, TensorFlow, and PyTorch, machine 
+ learning has become accessible and is widely applied in areas such as recommendation 
+ systems, image recognition, and natural language processing.
