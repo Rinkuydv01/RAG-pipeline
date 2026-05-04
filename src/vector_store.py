@@ -41,7 +41,7 @@ class FaissVectorStore:
         chunks = emb_pipe.chunk_documents(documents)
         embeddings = emb_pipe.embed_chunks(chunks)
 
-        # ✅ FIX: include source + page info
+        #include source + page info
         metadatas = []
         for chunk in chunks:
             metadatas.append({
@@ -112,7 +112,7 @@ class FaissVectorStore:
 
             meta = self.metadata[idx]
 
-            # ✅ FILTER (this is the real fix)
+            #FILTER
             if source_filter and source_filter not in meta["source"]:
                 continue
 
