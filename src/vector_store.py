@@ -152,7 +152,7 @@ if __name__ == "__main__":
     store.load()
 
     results = store.query(
-        "What is attention mechanism?",
+        "What is a Rake in 'The Art of Seduction' by Robert Greene?",
         top_k=3
     )
 
