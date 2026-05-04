@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     if not os.path.exists("faiss_store/faiss.index"):
         print("[INFO] Building FAISS index (first time)...")
-        docs = load_all_documents("data")   # ✅ Only load when needed
+        docs = load_all_documents("data")   #Only load when needed
         store.build_from_documents(docs)
     else:
         print("[INFO] Loading existing FAISS index...")
