@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     rag = RAGSearch(store, llm)
 
-    query = "Explain what is Exaggerated Emotional Coherence (Halo Effect) in context of thinking fast and slow by daniel kahneman"
+    query = "Explain me the main difference between 2 types of Rake described in the book 'The Art of Seduction' by Robert Greene"
     result = rag.search_and_summarize(query)
 
     print("Summary:", result)
