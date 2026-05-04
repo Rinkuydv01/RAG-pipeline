@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyMuPDFLoader
 from typing import List, Any
 
 def load_all_documents(pdf_directory: str) -> List[Any]:
@@ -17,7 +17,7 @@ def load_all_documents(pdf_directory: str) -> List[Any]:
         print(f"\nProcessing: {pdf_file.name}")
 
         try:
-            loader = PyPDFLoader(str(pdf_file))
+            loader = PyMuPDFLoader(str(pdf_file))
             documents = loader.load()
 
             # Add source info to metadata

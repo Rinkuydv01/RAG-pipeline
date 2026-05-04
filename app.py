@@ -9,25 +9,24 @@ load_dotenv()
 
 if __name__ == "__main__":
 
-    docs = load_all_documents("data")
-
     store = FaissVectorStore("faiss_store")
 
     if not os.path.exists("faiss_store/faiss.index"):
-        print("Building FAISS index...")
+        print("[INFO] Building FAISS index (first time)...")
+        docs = load_all_documents("data")   # ✅ Only load when needed
         store.build_from_documents(docs)
     else:
-        print("Loading existing FAISS index...")
+        print("[INFO] Loading existing FAISS index...")
         store.load()
 
     llm = ChatGroq(
         groq_api_key=os.getenv("GROQ_API_KEY"),
-        model_name="llama-3.1-8b-instant"   
+        model_name="llama-3.1-8b-instant"
     )
 
     rag = RAGSearch(store, llm)
 
-    query = "What is regression in the art of seduction"
+    query = "Explain what is Exaggerated Emotional Coherence (Halo Effect) in context of thinking fast and slow by daniel kahneman"
     result = rag.search_and_summarize(query)
 
     print("Summary:", result)

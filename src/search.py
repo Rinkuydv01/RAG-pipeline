@@ -18,7 +18,10 @@ class RAGSearch:
             return "No relevant documents found."
 
         prompt = f"""
-Summarize the following context for the query: '{query}'
+Answer strictly based on the context.
+Define the concept clearly.
+Do not include unrelated concepts.
+Keep the answer concise. '{query}'
 
 Context:
 {context}
