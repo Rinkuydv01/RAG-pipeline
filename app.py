@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     rag = RAGSearch(store, llm)
 
-    query = "Explain me the main difference between 2 types of Rake described in the book 'The Art of Seduction' by Robert Greene"
+    query = "Explain the Consulting Room Games from Games people play book"
     result = rag.search_and_summarize(query)
 
     print("Summary:", result)
