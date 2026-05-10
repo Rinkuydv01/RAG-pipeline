@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.analysis.extraPaths": [
+        "./",
+        "./src"
+    ],
+    "pyrefly.analysis.extraPaths": [
+        "./",
+        "./src"
+    ]
+}
